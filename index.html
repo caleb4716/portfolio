@@ -5,7 +5,9 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+		<script src="js/bootstrap.min.js"></script>
 		
 		<!-- Integrity Text (In Order)
 		integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
@@ -17,74 +19,95 @@
 		<title>Caleb Russell</title>
 	</head>
 	
-	<body>
-	
+	<body data-spy="scroll" data-target="#scrollspytarget">
 		<nav class="navbar navbar-custom navbar-fixed-top">
-			<div class="container navbar-back">
+			<div class="container" >
 				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
 					<a class="navbar-brand" href="index.html">Caleb Russell</a>
 				</div>
-				<ul class="nav navbar-nav">
-					<li><a href="#page-work">My Work</a></li>
-					<li><a href="#page-education">Education & Experience</a></li>
-					<li><a href="#page-about">About Me</a></li>
-					<li><a href="#page-contact">Contact</a></li>
-				</ul>
+				<div id="scrollspytarget" class="navbar-collapse collapse">
+					<ul class="nav nav-tabs navbar-nav" role="tablist">
+						<li><a href="#page-work">My Work</a></li>
+						<li><a href="#page-education">Education &amp Experience</a></li>
+						<li><a href="#page-about">About Me</a></li>
+						<li><a href="#page-contact">Contact</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 		
-		<div class="container temp-class">
+		<main>
 			
-			<div id="page-work">
+			<section id="page-work">
 				<h1>My Work</h1>
 				<div class="row">
-					<div class="col-md-6"><h3>Sudoku Game</h3><p>Yada Yada Yada this is a paragraph about my sudoku project. I built it a while ago and can't really remember much about it. I used java. More info that doesn't really matter. I will come up with a meaningful paragraph here some other time.</p></div>
+					<div class="col-md-6">
+						<h3>Sudoku Game</h3>
+						<blockquote cite="https://en.wikipedia.org/wiki/Sudoku">Sudoku is a logic-based, combinatorial number-placement puzzle. The objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 sub-grids that compose the grid (also called "boxes", "blocks", "regions", or "sub-squares") contains all of the digits from 1 to 9. The puzzle setter provides a partially completed grid, which for a well-posed puzzle has a unique solution.</blockquote>
+						<p>One of my first real projects in Java, this game allows the player to play the game of sudoku in a window on their desktop. The player is able to start new games, save games, and load games. While in a game, the player has the option of enabling or disabling Error Checking. When Error Checking is enabled, the game will highlight the rows, columns, and mini-grids in which conflicting numbers are found, allowing newer players the opportunity to catch a mistake as it is made, rather than continuing to play and mess up the entire board. </p>
+					</div>
 					<div class="col-md-6"><img id="pic-sudoku" src="images/sudoku.png" alt="Sudoku Project in Java"></div>
 				</div>
-			</div>
+			</section>
 			
-			<div id="page-education">
-				<h1>Education & Experience</h1>
+			<section id="page-education">
+				<h1>Education &amp Experience</h1>
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<h3>Formal Education</h3>
 						<ul>
 							<li>AAS .Net Programming (In Progress)</li>
 							<li>BS Computer Science (Coming Soon-ish)</li>
 						</ul>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<h3>Technical Skillset</h3>
 						<ul>
 							<li>Programming in Java/C#/PHP</li>
 							<li>XAMPP</li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h3>Current Studies</h3>
+						<ul>
 							<li>HTML/CSS</li>
+							<li>Database Design/SQL</li>
+							<li>Javascript</li>
+							<li>ASP .NET</li>
 						</ul>
 					</div>
 				</div>
-			</div>
+			</section>
 			
-			<div id="page-about">
+			<section id="page-about">
 				<h1>About Me</h1>
 				<div class="row">
 					<div class="col-md-3 col-md-push-9"><img id="pic-pro" src="images/pic-pro.jpg" alt ="Professional Photo" class="img-responsive"></div>
-					<div class="col-md-9 col-md-pull-3"><p>Here's the professional paragraph talking about how I like computers and how I decided I want to do it as a career. This paragraph focuses mostly on computer's and "professional" interests. </p></div>
+					<div class="col-md-9 col-md-pull-3">
+						<p>My interest in computer programming and software development was sparked in my senior year of high school. One of our projects in an engineering principles class revolved around building and programming a robot to perform a basic task. My group of three decided to build a controllable robot tank. The other two were in charge of assembling the robot, and I was placed in charge of programming the controller to drive the tank using a simple C-based programming language. That experience left me curious as to what else we could do, and within the week we hooked up the tank with sensors and were able to have it drive autopilot along a tape path laid out throughout the classroom. </p>
+						<p>After high school I continued to experimenent around with basic programming projects, toying with Java and C# and a little basic web development on the side. A friend and I considered starting a freelance web design gig, but after looking into more complex web development I decided that I wanted fill in the gaps in my limited knowledge, and decided to enroll at Hennepin Technical College and pursue an Associate's Degree in .NET programming. At the point at which anybody other than my HTML instructor sees this site, I will have completed most if not all of my associates degree and will be planning the next step in my software development career, whether it be an internship, an entry level programming job, or a Bachelor's Degree in Computer Science.</p>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-3"><img src="images/pic-casual.png" alt="Casual Photo" class="img-responsive"></div>
-					<div class="col-md-9">This is a more personal about me paragraph and involves things unrelated to work</div>
+					<div class="col-md-9">Outside of school and computer related activities, I have a variety of different ways to keep myself busy. I work 35 hours a week as a cook at a local Perkins Restaurant so that I can pay bills and rent and continue living as an independent adult/college student. I enjoy solving Rubik's cubes and learning the various algorithms and methods to solve more quickly and efficiently, and am considering having my next software project be an interactive program that guides a person step by step through solving any mixed cube using the Beginner's Method. I have decided to relearn how to snowboard this winter after a 6 year break, and am looking forward to next summer when I will (hopefully) be able to continue my pursuit of my skydiving A-License, which I have been putting quite a bit of overtime into work recently to save up for. </div>
 				</div>
-			</div>
+			</section>
 			
-			<div id="page-contact">
+			<section id="page-contact">
 				<h1>Contact Me</h1>
 					<h5>CalebRussell@email.com</h5>
 					<h5>999-444-3333</h5>
 					<h5>github link</h5>
-			</div>
+			</section>
 			
 			
-		</div>
+		</main>
 		
 	</body>
 	
